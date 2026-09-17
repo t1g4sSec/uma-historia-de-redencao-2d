@@ -8,11 +8,19 @@ const TILE_W := 128
 const TILE_H := 64
 const OUT_PATH := "res://assets/tilesets/placeholder_iso_tiles.png"
 
-# grama, água, pedra/caminho
+# Índice do atlas = coluna. Ordem é fixa — nunca reordenar, só adicionar no
+# final, senão todo tile_map_data já salvo em cenas passa a apontar errado.
+# 0 grama · 1 água · 2 caminho/pedra · 3 terra arável (campo) ·
+# 4 piso de construção (casa/galpão) · 5 pasto · 6 cerca/curral · 7 reservado
 const COLORS := [
 	Color(0.35, 0.62, 0.28),
 	Color(0.25, 0.45, 0.75),
 	Color(0.55, 0.52, 0.48),
+	Color(0.45, 0.32, 0.20),
+	Color(0.80, 0.70, 0.50),
+	Color(0.55, 0.60, 0.25),
+	Color(0.35, 0.22, 0.12),
+	Color(0.65, 0.60, 0.75),
 ]
 
 func _initialize():
