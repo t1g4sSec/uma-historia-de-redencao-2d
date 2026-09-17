@@ -9,3 +9,12 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Godot
+.godot/
+export_presets.cfg
+*.translation
+*.tmp
+
+# GUT test results
+tests/results/

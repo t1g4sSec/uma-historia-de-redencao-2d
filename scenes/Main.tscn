@@ -1,0 +1,10 @@
+[gd_scene load_steps=1 format=3]
+
+[node name="Main" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 500.0
+offset_bottom = 64.0
+text = "Uma Historia de Redencao — setup ok"

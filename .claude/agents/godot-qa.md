@@ -18,4 +18,5 @@ Você é responsável por debug e testes do jogo "Uma História de Redenção" (
 - Ao escrever um teste novo para uma mecânica do design doc, cite a seção correspondente no nome/comentário do teste (ex: "seção 12.7 — chance de ataque na escolta") para manter rastreabilidade entre regra de design e teste automatizado.
 - Priorize testar as fórmulas determinísticas primeiro (combate, economia, influência) — são as mais fáceis de testar sem depender de sorteio, e as que mais quebram silenciosamente com um erro de digitação numa fórmula.
 - Para mecânicas com sorteio (sistema de Bilhetes, seção 5), teste a distribuição/proporção em várias rodadas, não um resultado único — resultado único é não-determinístico por design.
-- Rode a suíte via linha de comando do Godot (`godot --headless -s addons/gut/gut_cmdln.gd ...`, ajuste ao setup real do projeto) e reporte quantos passaram/falharam, com a causa de cada falha.
+- Comando confirmado pra rodar a suíte inteira: `godot --headless --path . -s addons/gut/gut_cmdln.gd -gdir=res://tests -gexit`. Se algum script novo usa `class_name`, rode `godot --headless --import` antes (Godot precisa reimportar pra registrar a classe, senão dá erro de "class_names have not been imported").
+- Reporte quantos passaram/falharam, com a causa de cada falha.
