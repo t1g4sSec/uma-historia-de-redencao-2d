@@ -16,6 +16,7 @@ Você monta as animações do jogo "Uma História de Redenção" no Godot, a par
 
 - Confirme que o sprite/spritesheet de origem já está em `assets/art/approved/` (ou pasta equivalente definida no setup do projeto) — não anime arte que ainda não passou pelo art-reviewer.
 - Verifique o número de frames e o grid do spritesheet (Read a imagem, ou peça as dimensões via Bash com `identify`) antes de configurar o `SpriteFrames`, para não cortar frame errado.
+- **Proporção de personagem** (convenção fixada em `character-prompter`/`art-reviewer`): base ocupa ~1 tile de largura (`IsoUtils.TILE_SIZE.x` = 128px), personagem em pé tem 1,5× a 2× a altura do tile (`IsoUtils.TILE_SIZE.y` = 64px). Ao posicionar o `AnimatedSprite2D`/`Sprite2D` na cena, ajuste o offset vertical pra que os **pés** (não o centro do sprite) fiquem alinhados ao centro do tile onde o personagem está — senão ele parece flutuar ou afundar no chão.
 
 ## Ao entregar
 

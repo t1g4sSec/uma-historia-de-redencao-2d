@@ -5,6 +5,10 @@ extends RefCounted
 ## isométrico do jogo (mapa estratégico ou cena jogável de província/
 ## cidade/aldeia) deve usar este tamanho, pra manter grid e câmera
 ## consistentes entre cenas diferentes.
+##
+## Personagens seguem essa mesma referência (ver .claude/agents/
+## character-prompter.md): base ~1 tile de largura (TILE_SIZE.x),
+## altura em pé entre 1,5x e 2x TILE_SIZE.y.
 const TILE_SIZE := Vector2i(128, 64)
 
 ## Posição de mundo (relativa ao próprio TileMapLayer) do centro de uma célula.
